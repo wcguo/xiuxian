@@ -7,7 +7,8 @@
   "contact": "plexpt",
   "homepage": "https://github.com/PlexPt/xiuxian",
   "dependencies": [
-    "base >= 1.1.0"
+    "base >= 1.1.0",
+    "flib"
   ],
   "description": "Try to make and then take pills of immortality and cultivate oneself to become on immortal.\n炼丹、炼器、符箓、妖兽、阵法、御兽、功法、灵脉、宗门、拍卖会。\n\n群289362487"
 }
