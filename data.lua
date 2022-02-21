@@ -1,3 +1,4 @@
+require("prototypes.fonts")
 require("prototypes.categories")
 require("prototypes.entity")
 require("prototypes.item")

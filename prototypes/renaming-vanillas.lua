@@ -43,7 +43,7 @@ data.raw.item["pumpjack"].localised_name = { "entity-name.xx-oil-pumpjack" }
 -- VEHICLES
 data.raw.car["tank"].localised_name = { "entity-name.xx-feijian" }
 
-data.raw.radar.radar.localised_name = { "entity-name.xx-feijian" }
+data.raw.radar.radar.localised_name = { "entity-name.探测法阵" }
 
 
 
