@@ -1,6 +1,7 @@
 require("prototypes.categories")
 require("prototypes.entity")
 require("prototypes.item")
+require("prototypes.item.huanhundan")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.lingshi.lingshi-ore")
