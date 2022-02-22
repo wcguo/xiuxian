@@ -2,9 +2,13 @@ local mod_gui = require("mod-gui")
 require "util"
 --require "particles"
 local LevelEnum = require("prototypes.enums.LevelEnum")
--- 一天的tick
+-- 真实一天的tick
 local daytick = 86400 * 60
 
+-- 虚拟一天的tick
+local dayage = 142
+
+-- 虚拟一年的tick
 local year = 51840
 
 local format_number = {} -- util.format_number()
@@ -93,7 +97,7 @@ function printXP(player, XP)
     if player and player.valid then
         player.surface.create_entity { name = "flying-text",
                                        position = player.position,
-                                       text = "折损了" .. RPG_format_number(XP) .. ' 寿元',
+                                       text = "折损了" .. RPG_format_number(XP/dayage) .. '天 寿元',
                                        color = colors.yellow }
         --if settings.get_player_settings(player)["charxpmod_print_xp_user"].value then
         --end
@@ -382,7 +386,6 @@ function InitPlayerGui(player)
                    sprite = "entity/character",
                    tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
                    style = mod_gui.top_button_style }
-
 
     local tabFrame = Topframe.add { type = "table", name = "xx_age_coulm", column_count = 1 }
 
@@ -1458,11 +1461,11 @@ function mine_age_use(player, entity)
     local age = 0
 
     if entity.prototype.max_health then
-        age = entity.prototype.max_health
+        age = entity.prototype.max_health or 400
         if entity.type == 'tree' then
-            age = age / 100
+            age = age
         else
-            age = age / 400
+            age = age / 10
         end
     end
 
@@ -1484,14 +1487,18 @@ script.on_event(defines.events.on_player_mined_entity, function(event)
         return
     end
 
-    local ent = event.entity
-    local name = ent.name
+    local entity = event.entity
+    local name = entity.name
 
-    if ent.type == 'tree' or (ent.type == 'simple-entity' and name:find('rock')) then
-        mine_age_use(player, ent)
-    end
-end,
-        { { filter = "type", type = "tree" }, { filter = "type", type = "simple-entity" } }
+    mine_age_use(player, entity)
+
+    --if entity.type == 'tree' or (entity.type == 'simple-entity' and name:find('rock')) then
+    --end
+end
+--,
+--        { { filter = "type", type = "tree" },
+--          { filter = "type", type = "resource" },
+--          { filter = "type", type = "simple-entity" } }
 )
 
 -- 吃东西
