@@ -1453,7 +1453,7 @@ function mine_age_use(player, entity)
     if age > 0 then
         local plname = player.name
         --寿元 = math.ceil(寿元 * global.personalxp.Level[plname] * global.XP_Mult)
-
+        global.xiuxian.usedAge[plname] = global.xiuxian.usedAge[plname] or 0
         global.xiuxian.usedAge[plname] = global.xiuxian.usedAge[plname] + age
         printXP(player, age)
     end
@@ -1462,18 +1462,17 @@ end
 
 -- 挖矿
 script.on_event(defines.events.on_player_mined_entity, function(event)
-    if global.setting_allow_xp_by_mining then
-        local player = game.players[event.player_index]
-        if not player.valid then
-            return
-        end
+    --if global.setting_allow_wakuangzhesou then
+    local player = game.players[event.player_index]
+    if not player.valid then
+        return
+    end
 
-        local ent = event.entity
-        local name = ent.name
+    local ent = event.entity
+    local name = ent.name
 
-        if ent.type == 'tree' or (ent.type == 'simple-entity' and name:find('rock')) then
-            mine_age_use(player, ent)
-        end
+    if ent.type == 'tree' or (ent.type == 'simple-entity' and name:find('rock')) then
+        mine_age_use(player, ent)
     end
 end,
         { { filter = "type", type = "tree" }, { filter = "type", type = "simple-entity" } }
