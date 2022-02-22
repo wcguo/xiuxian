@@ -30,6 +30,19 @@ local function getTotalAge(player)
     return math.pow(2, level) * daytick
 end
 
+--获取修为寿命年
+local function getTotalAgeYear(player)
+    return getTotalAge(player) / year
+end
+
+--获取当前年龄
+local function getUsedYear(player)
+    local usedAge = global.xiuxian.usedAge[player.name] or 0
+    local onlineAge = player.online_time
+    local UsedYear = (usedAge + onlineAge) / year
+    return UsedYear
+end
+
 function shortnumberstring(number)
     local steps = {
         { 1, "" },
@@ -367,9 +380,9 @@ function InitPlayerGui(player)
     Topframe.add { name = "xx_headpic",
                    type = "sprite-button",
                    sprite = "entity/character",
-                   tooltip = { "panel-title", player.name },
+                   tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年",
                    style = mod_gui.top_button_style }
-    -- "mod_gui_button"}
+
 
     local tabFrame = Topframe.add { type = "table", name = "xx_age_coulm", column_count = 1 }
 
@@ -830,6 +843,9 @@ function UpdatePanel(player)
 
     xx_age_progress.value = pbvalue
 
+    local xx_headpic = player.gui.top.xx_age_bar.xx_headpic
+
+    xx_headpic.tooltip = "寿元已用：" .. getUsedYear(player) .. "/" .. getTotalAgeYear(player) .. "年"
     if true then
         return
     end

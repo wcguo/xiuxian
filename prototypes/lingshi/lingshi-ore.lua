@@ -7,7 +7,7 @@ data:extend({
         category = "resource",
         name = "lingshi-ore",
         richness = true,
-        order = "b-e"
+        order = "a-a"
     },
     {
         type = "noise-layer",
@@ -19,7 +19,7 @@ data:extend({
         name = "lingshi-ore",
         icon = "__xiuxian__/graphics/icons/lingshi-ore.png",
         flags = { "placeable-neutral" },
-        order = "a-b-a",
+        order = "a-a",
         map_color = { r = 211 / 255, g = 215 / 255, b = 212 / 255 },
         minable = {
             hardness = 1,
@@ -71,7 +71,7 @@ data:extend({
         --    { filename = "__xiuxian__/graphics/icons/lingshi-ore-4.png", size = 64, scale = 0.25 },
         --},
         subgroup = "raw-resource",
-        order = "t-c-a",
+        order = "a-c-a",
         stack_size = 100
     },
 })
