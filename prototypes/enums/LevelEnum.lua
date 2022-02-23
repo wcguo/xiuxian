@@ -1,7 +1,7 @@
 local LevelEnum = {}
 
 LevelEnum[1] = "凡人"
-LevelEnum[2] = "炼气"
+LevelEnum[2] = "炼气期"
 LevelEnum[3] = "筑基期"
 LevelEnum[4] = "金丹期"
 LevelEnum[5] = "元婴期"

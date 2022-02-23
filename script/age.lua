@@ -71,7 +71,7 @@ end
 function RPG_format_number(number)
     local result
     if number < 1000000000 then
-        result = number -- format_number(number)
+        result = string.format("%.1f", number) -- format_number(number)
     else
         result = shortnumberstring(number)
     end
@@ -97,7 +97,7 @@ function printXP(player, XP)
     if player and player.valid then
         player.surface.create_entity { name = "flying-text",
                                        position = player.position,
-                                       text = "折损了" .. RPG_format_number(XP/dayage) .. '天 寿元',
+                                       text = "折损了" .. RPG_format_number(XP / dayage) .. '天 寿元',
                                        color = colors.yellow }
         --if settings.get_player_settings(player)["charxpmod_print_xp_user"].value then
         --end
