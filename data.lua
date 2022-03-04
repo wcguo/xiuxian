@@ -22,3 +22,8 @@ require("prototypes.lingshi.lingshi-earth-ore")
 require("prototypes.lingshi.lingshi-earth-ore-particle")
 
 
+require("prototypes.auto.AutoGroups")
+require("prototypes.auto.AutoSubGroups")
+require("prototypes.auto.AutoModuleCategory")
+require("prototypes.auto.AutoRecipeCategory")
+require("prototypes.auto.AutoItems")

@@ -53,4 +53,4 @@ data.raw.radar.radar.localised_name = { "entity-name.探测法阵" }
 local modtool = require("modtool")
 
 modtool.icons.setItemIcon("automation-science-pack",   "__xiuxian__/graphics/icons/danyao/dan-juqi.png", 128, 1)
-modtool.icons.setItemIcon("utility-science-pack",   "__xiuxian__/graphics/icons/danyao/object_PINGdanyao01.png", 45, 1)
+modtool.icons.setItemIcon("utility-science-pack",   "__xiuxian__/graphics/icons/danyao/丹药瓶装01.png", 128, 1)

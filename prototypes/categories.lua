@@ -46,8 +46,8 @@ data:extend({
         group = "xiuxian",
         order = "a-a"
     },
-    {
-        type = "module-category",
-        name = "地火"
-    },
+    --{
+    --    type = "module-category",
+    --    name = "地火"
+    --},
 })
