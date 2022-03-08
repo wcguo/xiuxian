@@ -8,7 +8,7 @@ data:extend(
                 name = "普通丹药",
                 localised_name = "普通丹药",
                 localised_description = "",
-                group  = "灵丹妙药",
+                group = "灵丹妙药",
             }
         }
 )
@@ -21,7 +21,7 @@ data:extend(
                 name = "修仙流体",
                 localised_name = "修仙流体",
                 localised_description = "修仙流体组 一个应该够了",
-                group  = "fluids",
+                group = "fluids",
             }
         }
 )
@@ -34,7 +34,7 @@ data:extend(
                 name = "天地灵火",
                 localised_name = "天地灵火",
                 localised_description = "",
-                group  = "天地灵火",
+                group = "天地灵火",
             }
         }
 )
@@ -47,7 +47,7 @@ data:extend(
                 name = "修仙材料",
                 localised_name = "修仙材料",
                 localised_description = "",
-                group  = "修仙材料",
+                group = "修仙材料",
             }
         }
 )
@@ -60,7 +60,7 @@ data:extend(
                 name = "阵法材料",
                 localised_name = "阵法材料",
                 localised_description = "",
-                group  = "阵法材料",
+                group = "阵法材料",
             }
         }
 )
@@ -73,7 +73,7 @@ data:extend(
                 name = "符箓",
                 localised_name = "符箓",
                 localised_description = "",
-                group  = "符箓",
+                group = "符箓",
             }
         }
 )
@@ -86,7 +86,7 @@ data:extend(
                 name = "建筑物",
                 localised_name = "建筑",
                 localised_description = "",
-                group  = "production",
+                group = "production",
             }
         }
 )
@@ -99,7 +99,7 @@ data:extend(
                 name = "剑",
                 localised_name = "剑",
                 localised_description = "",
-                group  = "combat",
+                group = "combat",
             }
         }
 )
@@ -112,7 +112,7 @@ data:extend(
                 name = "杂项",
                 localised_name = "杂项",
                 localised_description = "",
-                group  = "修仙材料",
+                group = "修仙材料",
             }
         }
 )
@@ -125,7 +125,7 @@ data:extend(
                 name = "灵药",
                 localised_name = "灵药",
                 localised_description = "灵药",
-                group  = "修仙材料",
+                group = "修仙材料",
             }
         }
 )
@@ -138,7 +138,7 @@ data:extend(
                 name = "炼器材料",
                 localised_name = "炼器材料",
                 localised_description = "",
-                group  = "修仙材料",
+                group = "修仙材料",
             }
         }
 )

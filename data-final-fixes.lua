@@ -1,5 +1,5 @@
 if true then
-    data.raw["recipe"]["electric-energy-interface"].enabled = true
+    --data.raw["recipe"]["electric-energy-interface"].enabled = true
 end
 
 for k, v in pairs(data.raw["recipe"]) do
