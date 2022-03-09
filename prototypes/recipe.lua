@@ -5,8 +5,8 @@ data:extend({
         enabled = true,
         ingredients = { { "stone", 50 },
                         { "iron-ore", 50 },
-                        { "lingshi-fire-ore", 4 },
-                        { "lingshi-earth-ore", 4 } },
+                        { "fire-ore", 4 },
+                        { "earth-ore", 4 } },
         result = "alchemy-furnace-9"
     },
     {
@@ -15,8 +15,8 @@ data:extend({
         enabled = true,
         ingredients = { { "stone", 100 },
                         { "iron-ore", 100 },
-                        { "lingshi-fire-ore", 100 },
-                        { "lingshi-earth-ore", 100 } },
+                        { "fire-ore", 100 },
+                        { "earth-ore", 100 } },
         result = "alchemy-furnace-8"
     },
     {
@@ -27,11 +27,11 @@ data:extend({
         enabled = true,
         energy_required = 15,
         ingredients = {
-            { "lingshi-gold-ore", 10 },
-            { "lingshi-wood-ore", 10 },
-            { "lingshi-water-ore", 10 },
-            { "lingshi-fire-ore", 10 },
-            { "lingshi-earth-ore", 10 }
+            { "gold-ore", 10 },
+            { "wood-ore", 10 },
+            { "water-ore", 10 },
+            { "fire-ore", 10 },
+            { "earth-ore", 10 }
         },
         result = "julingzhen",
         --enabled = false
